@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <div class="layer">
+      <div id="above-header" class="mainnavsection home">
+        <h1>Michael Sandon</h1>
+        <h4>Experienced Reliability Engineer. 
+          <span class="home-emphasis">
+            Aspiring Developer
+          </span>
+        </h4>
+      </div>
+      <div id = "navbar" class="row-navbar home">
+        <div><h2>Michael Sandon</h2></div>
+        <ul class="nav">
+          <li><a class="navbaritem active" href="/">Home</a></li>
+          <li><a class="navbaritem" href="#About">About</a></li>
+          <li><a class="navbaritem" href="#Resume">Resume</a></li>
+          <li><a class="navbaritem" href="#Portfolio">Portfolio</a></li>
+          <li><a class="navbaritem" href="#Services">Services</a></li>
+        </ul>
+      </div>
+      <div id= "content" class="row-content hide">
+        <div class="mainnavsection about hide"></div>
+        <div class="mainnavsection resume hide">
+          {% include 'resume.html' %}
+        </div>
+        <div class="mainnavsection portfolio hide"></div>
+        <div class="mainnavsection services hide">
+          <h1>Services</h1>
+          {% for service in services %}
+          <div class="services-tile">
+            <div class="service-icon">
+              <i class="fa fa-code"></i>
+            </div>
+            <h4>{{service['Title']}}</h4>
+            <p>{{service['Details']}}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div id = "footer" class="left row-footer">
+        <!-- Grid container -->
+        <div class="footer footer-home">
+          <!-- Section: Social media -->
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+          <!-- Section: Social media -->
+        </div>
+      </div>
+  
+        
+    </div>
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>
