@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -26,12 +27,12 @@
         </ul>
       </div>
       <div id= "content" class="row-content hide">
-        <div class="mainnavsection about hide"></div>
-        <div class="mainnavsection resume hide">
+        <div class="mainnavsection about hide animate slide"></div>
+        <div class="mainnavsection resume hide animate slide">
           {% include 'resume.html' %}
         </div>
-        <div class="mainnavsection portfolio hide"></div>
-        <div class="mainnavsection services hide">
+        <div class="mainnavsection portfolio hide animate slide"></div>
+        <div class="mainnavsection services hide animate slide">
           <h1>Services</h1>
           {% for service in services %}
           <div class="services-tile">
@@ -39,7 +40,7 @@
               <i class="fa fa-code"></i>
             </div>
             <h4>{{service['Title']}}</h4>
-            <p>{{service['Details']}}</p>
+            <p class="details">{{service['Details']}}</p>
           </div>
           {% endfor %}
         </div>
