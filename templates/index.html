@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="layer">
-      <div id="above-header" class="mainnavsection home">
+      <div id="above-header" class="mainsection home animate slideleft ml-3">
         <h1>Michael Sandon</h1>
         <h4>Experienced Reliability Engineer. 
           <span class="home-emphasis">
@@ -17,37 +17,36 @@
         </h4>
       </div>
       <div id = "navbar" class="row-navbar home">
-        <div><h2>Michael Sandon</h2></div>
-        <ul class="nav">
-          <li><a class="navbaritem active" href="/">Home</a></li>
-          <li><a class="navbaritem" href="#About">About</a></li>
+        <div><p class= "navlabel">Michael Sandon</p></div>
+        <div><span class="navbar-toggle" id="js-navbar-toggle"><i class="fa fa-bars"></i></span></div>
+        <ul id="menu" class="nav">
+          <li class="navblock"><a class="navbaritem active" href="#Home">Home</a></li>
+          <li class="navblock"><a class="navbaritem" href="#About">About</a></li>
           <li><a class="navbaritem" href="#Resume">Resume</a></li>
           <li><a class="navbaritem" href="#Portfolio">Portfolio</a></li>
           <li><a class="navbaritem" href="#Services">Services</a></li>
+          <li><a class="navbaritem" href="#Contact">Contact</a></li>
         </ul>
       </div>
       <div id= "content" class="row-content hide">
-        <div class="mainnavsection about hide animate slide"></div>
-        <div class="mainnavsection resume hide animate slide">
+        <div class="mainsection about hide animate slideup">
+          {% include 'about.html' %}
+        </div>
+
+        <div class="mainsection resume hide animate slideup">
           {% include 'resume.html' %}
         </div>
-        <div class="mainnavsection portfolio hide animate slide"></div>
-        <div class="mainnavsection services hide animate slide">
-          <h1>Services</h1>
-          {% for service in services %}
-          <div class="services-tile">
-            <div class="service-icon">
-              <i class="fa fa-code"></i>
-            </div>
-            <h4>{{service['Title']}}</h4>
-            <p class="details">{{service['Details']}}</p>
-          </div>
-          {% endfor %}
+        <div class="mainsection portfolio hide animate slideup"></div>
+        <div class="mainsection services hide animate slideup">
+          {% include 'services.html' %}
+        </div>
+        <div class="mainsection contact hide animate slideup">
+          {% include 'contact.html' %}
         </div>
       </div>
-      <div id = "footer" class="left row-footer">
+      <div id = "footer" class="left row-footer pl-3">
         <!-- Grid container -->
-        <div class="footer footer-home">
+        <div class="">
           <!-- Section: Social media -->
             <a href="#" class="fa fa-google"></a>
             <a href="#" class="fa fa-linkedin"></a>
@@ -58,7 +57,12 @@
   
         
     </div>
+  <script src= "https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
 
-    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    
   </body>
 </html>

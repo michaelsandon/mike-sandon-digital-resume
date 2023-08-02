@@ -1,0 +1,45 @@
+<h4 class="section-heading">About Me</h4>
+<div id="about-me-pic">
+  {% for detail in about['Basics'] %}
+  <p class = "details"><strong>{{detail['Attribute']}} :</strong> {{detail['Value']}}</p>
+  {% endfor %}
+  <p class = "details"><strong>Interests: </strong></p>
+  <ul>
+    {% for interest in about['Interests'] %}
+      <li class="details">{{interest}}</li>
+    {% endfor %}
+  </ul>
+</div>
+<br><br>
+<h4 class="section-heading">Skills</h4>
+<div class="white-layer pl-2 pt-1">
+  {% for skillgroup in about['Skills'] %}
+    <h6 class="font-lg mt-3"><strong>{{skillgroup['Skills Group']}}</strong></h6>
+    <div class="pl-2">
+    {% for skill in skillgroup['Skills'] %}
+      <div class="wrapped-list skill">
+        <div class = "details upper">{{skill['Desc']}}</div>
+        <div class="strength-bar">
+          <div class = "strength-bar-level" data-level = "{{skill['Lvl']}}"></div>     
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<br><br>
+<h4 class="section-heading">Languages & Tools</h4>
+<div class="white-layer pl-2 pt-1">
+  {% for langgroup in about['Languages'] %}
+    <h6 class="font-lg"><strong>{{langgroup['Language Group']}}</strong></h6>
+    <div class="pl-2">
+    {% for lang in langgroup['Languages'] %}
+      <div class="wrapped-list skill">
+        <div class = "details">{{lang}}</div>
+        <div class = "strength-bar"></div>        
+      </div>
+    {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<br><br>

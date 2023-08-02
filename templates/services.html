@@ -1,0 +1,10 @@
+<h1 class="section-heading">My Services</h1>
+{% for service in services %}
+<div class="services-tile">
+  <div class="service-icon">
+    <i class="fa fa-code"></i>
+  </div>
+  <h4>{{service['Title']}}</h4>
+  <p class="details">{{service['Details']}}</p>
+</div>
+{% endfor %}

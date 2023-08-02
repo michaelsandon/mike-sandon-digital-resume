@@ -12,7 +12,7 @@ for (var i = 0; i < btns.length; i++) {
     
     //code to hide and display the specific content section
   var selected_tab = this.innerText.toLowerCase()
-  var manip_sections = document.getElementsByClassName("mainnavsection")
+  var manip_sections = document.getElementsByClassName("mainsection")
   for (var j = 0; j < manip_sections.length; j++){
     var div = manip_sections[j]
     if (div.classList.contains(selected_tab)){
@@ -42,5 +42,39 @@ for (var i = 0; i < btns.length; i++) {
       footer.classList.add("main")
     }
 
+    togglemenu();
   });
 }
+
+
+$(document).on('submit','#contact-form',function(e){
+    console.log('hello');
+    e.preventDefault();
+    $.ajax({
+      type:'POST',
+      url:'/',
+      data:$("#contact-form").serialize(),
+      success:function()
+      {
+        alert('message sent');
+      }
+    })
+  });
+
+
+document.getElementById("js-navbar-toggle").addEventListener("click", togglemenu);
+
+function togglemenu(){
+  var navbar = document.getElementById("navbar")
+  var menu = document.getElementById("menu")
+  var menubutton = document.getElementById("js-navbar-toggle")
+  if(!navbar.classList.contains("expand")){
+    menubutton.innerHTML = '<i class="fa fa-window-close"></i>'
+  } else {
+    menubutton.innerHTML = '<i class="fa fa-bars"></i>'
+  }
+
+  navbar.classList.toggle("expand")
+  menu.classList.toggle("expand")
+                                                                                
+                                                                               };

@@ -1,3 +1,98 @@
+@media screen and (min-width: 600px) {
+  #js-navbar-toggle {
+    display: none;
+  }
+
+  #footer {
+    flex:1 0 50px;
+  }
+  
+  #navbar.home {
+    flex:0 0 50px;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .navblock {
+    width: 100% !important;
+  }
+
+  .nav > li {
+    width: 100% !important;
+  }
+  .nav {
+    display: flex;
+    width: 100%;
+  }
+
+  #navbar:not(.expand) {
+    flex:1 1 auto;
+    flex-wrap: wrap;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu:not(.expand) {
+    display: none;
+  }
+
+  #navbar.expand:not(.home) {
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #navbar.expand.home {
+    height: auto;
+    overflow: auto;
+    scrollbar-width:none;
+  }
+
+  #navbar::-webkit-scrollbar{
+    display: none;
+  }
+
+  #footer {
+    flex:0 0 50px;
+  }
+}
+
+
+#navbar:not(.home) {
+  background: rgba(2, 45, 74, 0.8);
+}
+
+
+#content {
+  flex:1 1 auto;
+  overflow:auto;
+  scrollbar-width: none;
+  /*background-color: rgba(2, 45, 74, 0.8);*/
+  margin-left:1%;
+  margin-top:2%;
+  margin-bottom:1%;
+}
+
+
+
+/*---------Footer standard styling ----------*/
+#footer.main {
+  background: rgba(2, 45, 74, 0.8);
+}
+
+#footer {
+  max-height: 50px;
+}
+
+#footer.main > div {
+  margin:auto;
+  text-align: center;
+}
+/*------------------ Styling for background images & Layers ------------*/
+
 body {
   background-image:
     url('/static/img/home_background.jpg');
@@ -19,55 +114,24 @@ body {
   flex-direction: column;
 }
 
-h1, h2, h4, .details {
-  color:white;
+#about-me-pic {
+  background-image: linear-gradient(to left, 
+                                    transparent 0%, 
+                                    rgba(2, 45, 74,0.5) 50%, 
+                                    rgb(2, 45, 74) 100%),
+    url("/static/img/beach.jpg");
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(3px);
+  height: 100%;
+  padding: 10px 30px 10px 10px;
+  box-shadow: 0 0 20px rgba(2, 45, 74,0.5) inset, 0 0 40px rgba(2, 45, 74,0.5) inset, 0 0 60px rgba(2, 45, 74,0.5) inset, 0 0 80px rgba(2, 45, 74,0.5) inset;
 }
 
-h5.subtitle {
-  color: #019fb6
-}
 
-.row-navbar {
-  flex:0 0 50px
-}
 
-.row-navbar:not(.home) {
-  background: rgba(2, 45, 74, 0.8);
-}
-
-#footer.main {
- background: rgba(2, 45, 74, 0.8);
-  padding:auto;
-}
-
-#footer.main > div {
-  margin:auto;
-  text-align: center;
-}
-
-.row-content {
-  flex:1 1 auto;
-  overflow:auto;
-  scrollbar-width: none;
-  /*background-color: rgba(2, 45, 74, 0.8);*/
-  margin-left:1%;
-  margin-top:2%;
-  margin-bottom:1%;
-}
-
-.row-content::-webkit-scrollbar{
-    display: none;
-  }
-
-.row-footer.main {
-  flex:0 0 50px;
-  height: 50px;
-}
-
-.row-footer:not(.main) {
-  flex:1 0 50px;
-  height: 50px;
-}
+/*------------------ Styling for home page text above nav ------------*/
 
 #above-header > h4 {
   color: #d9d9d9
@@ -79,36 +143,32 @@ h5.subtitle {
 }
 
 #above-header {
-  margin: 40vh auto auto 15px;
+  margin: 40vh auto auto 0px;
 }
 
-#navbar {
-  height:50px;
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-}
 
-#navbar.home > div {
+
+/*------------------ Styling for label which appears on navbar ------------*/
+
+#navbar.home > div > .navlabel {
   display: none
 }
 
-.mainnavsection:not(#above-header) {
-/*  
-  width:99%;
-  margin-left:1%;
-  margin-top:2%; */
-  background-color: rgba(2, 45, 74, 0.8);
-  padding: 20px;
+.navlabel {
+  font-size: 28px;
+  margin: auto 0px auto 10px;
+  color: white;
+  font-weight: bold;
 }
 
 
+
+/*------------------ Styling for nav menu items ------------*/
 
 ul.nav {
   list-style-type: none;
   margin-left: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #333;
   background: none;
 }
@@ -149,19 +209,53 @@ li a:hover:not(.active):after {
 }
 
 
+
+/*--------------------Common Styling across content pages -----------------*/
+
+.white-layer {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+h1, h2, h4, .details, label {
+  color:white;
+}
+
+h5.subtitle {
+  color: #019fb6
+}
+.row-content::-webkit-scrollbar{
+    display: none;
+  }
+
+.mainsection:not(#above-header) {
+  background-color: rgba(2, 45, 74, 0.8);
+  padding: 20px;
+}
+
+
 div.hide {
   display:none !important
 }
 
-.grouptitle {
-  /*background-image: linear-gradient(to right, rgba(235, 237, 240,0), lightgray , rgba(235, 237, 240,0));*/
-  text-align:left;
-}
-
-.grouptitle h2 {
+.section-heading {
   font-weight: bold;
   color: white;
   text-transform: uppercase;
+  text-align:left;
+}
+
+.section-heading:before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 5px;
+  background: #019fb6;
+  left: 2px;
+  position: relative;
 }
 
 .jobrole::before {
@@ -179,6 +273,42 @@ div.hide {
   height:1600px;
   width: 100%;
 } */
+
+
+/*--------------------- about styling ----------------------------------*/
+.strength-bar {
+  width: 200px;
+  height: 10px;
+  background: grey;
+}
+
+div[data-level="Experienced"] {
+  width : 100%;
+  height : 100%;
+  background-color: #69b6d5;
+}
+
+div[data-level="Proficient"] {
+  width : 80%;
+  height : 100%;
+  background-color: #69b6d5;
+}
+
+.wrapped-list {
+  display: inline-block;
+}
+
+.skill {
+  width: 300px;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.font-lg {
+  color: lightgrey
+}
 
 /*---------------------services styling ----------------------------------*/
 
@@ -201,41 +331,34 @@ div.hide {
   margin: auto;
 }
 
-/*---------------------footer styling ----------------------------------*/
-
-.footer-main {
-  display: flex;
-  justify-content: center;
-  background: rgba(2, 45, 74, 0.7);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height:50px;
+/*---------------------conatct form styling ----------------------------------*/
+#contact-form {
+  max-width: 600px;
+  margin: auto;
 }
 
-.fa {  
+/*---------------------icon styling ----------------------------------*/
+
+.fa:not(.fa-bars, .fa-window-close) {  
   padding: 10px;  
   text-align: center;  
   margin: 5px 2px;  
   font-size: 20px;  
   width: 40px;
   border-radius: 50%;
-}  
- 
-.fa-google, fa-code {  
   background: rgba(2, 45, 74, 0.7);  
   color: white;  
-}  
-.fa-linkedin {  
-  background: rgba(2, 45, 74, 0.7);/*#125688;*/  
-  color: white;  
-}  
+} 
 
-.fa-github {  
-  background: rgba(2, 45, 74, 0.7); /*#dd4b39;*/ 
-  color: white;  
-}  
+.fa-bars, .fa-window-close {  
+  padding: 10px;  
+  text-align: center;  
+  margin: 5px 2px;  
+  font-size: 20px;  
+  width: 40px;
+  color: white;
+  background: transparent;
+}   
   
 .fa:hover {  
     opacity: 0.9;  
@@ -254,12 +377,25 @@ https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/
   animation-fill-mode: backwards;
 }
 
-.animate.slide { animation-name: animate-slide; }
+.animate.slideup { animation-name: animate-slideup; }
 
-@keyframes animate-slide {
+@keyframes animate-slideup {
   0% {
     opacity: 0;
     transform: translate(0,60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+}
+
+.animate.slideleft { animation-name: animate-slideleft; }
+
+@keyframes animate-slideleft {
+  0% {
+    opacity: 0;
+    transform: translate(30px,0px);
   }
   100% {
     opacity: 1;
