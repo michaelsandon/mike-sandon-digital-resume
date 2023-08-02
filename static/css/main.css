@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
   #js-navbar-toggle {
     display: none;
   }
@@ -7,13 +7,16 @@
     flex:1 0 50px;
   }
   
-  #navbar.home {
+  #navbar {
     flex:0 0 50px;
+    min-height: 50px;
+    flex-wrap: wrap;
+    display: flex;
   }
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px){
   .navblock {
     width: 100% !important;
   }
@@ -26,12 +29,16 @@
     width: 100%;
   }
 
-  #navbar:not(.expand) {
+  #navbar.home:not(.expand) {
     flex:1 1 auto;
-    flex-wrap: wrap;
     min-height: 50px;
+  }
+
+  #navbar:not(.home):not(.expand) {
+    flex:0 0 50px;
+    min-height: 50px;
+    flex-wrap: wrap;
     display: flex;
-    flex-direction: row;
   }
 
   #menu:not(.expand) {
@@ -58,6 +65,13 @@
   #footer {
     flex:0 0 50px;
   }
+
+  #nav-2 {
+    flex: 0 0 50px;
+  }
+  #nav-1 {
+    flex: 1 0 200px;
+  }
 }
 
 
@@ -81,10 +95,11 @@
 /*---------Footer standard styling ----------*/
 #footer.main {
   background: rgba(2, 45, 74, 0.8);
+  max-height: 50px;
 }
 
 #footer {
-  max-height: 50px;
+  
 }
 
 #footer.main > div {
@@ -258,14 +273,14 @@ div.hide {
   position: relative;
 }
 
-.jobrole::before {
+.subtitle::before {
   content: '';
   display: inline-block;
   width: 15px;
   height: 15px;
   position: relative;
-  top:25px;
-  left: -22px;
+  top:0px;
+  left: -6px;
   border-radius: 7.5px;
   background-color: #69b6d5;
 }
@@ -401,4 +416,23 @@ https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/
     opacity: 1;
     transform: translate(0,0);
   }
+}
+
+
+.flex-9 {
+  flex: 1 1 200px;
+}
+
+.flex-3 {
+  flex: 0 0 200px;
+}
+
+.flex-11 {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.jobcontent {
+  display: flex;
+  flex-wrap: wrap;
 }
