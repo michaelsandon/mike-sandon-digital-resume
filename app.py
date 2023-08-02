@@ -11,14 +11,6 @@ mail = Mail()
 
 mail.init_app(app)
 
-#msg = Message(subject='Test email from Flask',
-#              recipients=['michael.a.sandon@gmail.com'],
-#              sender='contactmichaelsandon@gmail.com',
-#              body="test 1 of 1")
-#
-#with app.app_context():
-#  mail.send(msg)
-
 
 @app.route('/', methods=['GET', 'POST'])
 def app_function():
@@ -26,13 +18,16 @@ def app_function():
     forminformation = request.form
 
     msg = Message(
-      subject='Business enquiry from '+forminformation['name'],
+      subject='Business enquiry from ' + forminformation['name'],
       recipients=['michael.a.sandon@gmail.com'],
       sender='contactmichaelsandon@gmail.com',
-      body="From:%s \n Contact Email:%s \n Contact Phone:%s \r\n Message:%s \r\n" % (forminformation['name'], forminformation['email'], forminformation['phone'], forminformation['message']))
+      body=
+      "From:%s \n Contact Email:%s \n Contact Phone:%s \r\n Message:%s \r\n" %
+      (forminformation['name'], forminformation['email'],
+       forminformation['phone'], forminformation['message']))
 
     mail.send(msg)
-  
+
   return render_template('index.html',
                          resume=Resume,
                          services=Services,
