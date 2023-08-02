@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
-from resume import *  #Resume, Services, About
+from data import *  #Resume, Services, About
 
 app = Flask(__name__)
 app.config.from_object('config')
