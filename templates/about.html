@@ -12,13 +12,13 @@
 </div>
 <br><br>
 <h4 class="section-heading">Skills</h4>
-<div class="white-layer pl-2 pt-1">
+<div class="white-layer pl-2 pt-2">
   {% for skillgroup in about['Skills'] %}
-    <h6 class="font-lg mt-3"><strong>{{skillgroup['Skills Group']}}</strong></h6>
-    <div class="pl-2">
+    <h6 class="font-lg"><strong>{{skillgroup['Skills Group']}}</strong></h6>
+    <div class="pl-2 pb-2">
     {% for skill in skillgroup['Skills'] %}
       <div class="wrapped-list skill">
-        <div class = "details upper">{{skill['Desc']}}</div>
+        <div class = "details upper pr-2">{{skill['Desc']}}</div>
         <div class="strength-bar">
           <div class = "strength-bar-level" data-level = "{{skill['Lvl']}}"></div>     
         </div>
@@ -29,13 +29,13 @@
 </div>
 <br><br>
 <h4 class="section-heading">Languages & Tools</h4>
-<div class="white-layer pl-2 pt-1">
+<div class="white-layer pl-2 pt-2">
   {% for langgroup in about['Languages'] %}
     <h6 class="font-lg"><strong>{{langgroup['Language Group']}}</strong></h6>
-    <div class="pl-2">
+    <div class="pl-2 pb-2">
     {% for lang in langgroup['Languages'] %}
       <div class="wrapped-list skill">
-        <div class = "details">{{lang}}</div>
+        <div class = "details pr-2">{{lang}}</div>
         <div class = "strength-bar"></div>        
       </div>
     {% endfor %}

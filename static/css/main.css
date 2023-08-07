@@ -309,12 +309,18 @@ div[data-level="Proficient"] {
   background-color: #69b6d5;
 }
 
+div[data-level="Competent"] {
+  width : 60%;
+  height : 100%;
+  background-color: #69b6d5;
+}
+
 .wrapped-list {
   display: inline-block;
 }
 
 .skill {
-  width: 300px;
+  width: 250px;
 }
 
 .upper {

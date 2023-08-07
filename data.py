@@ -90,60 +90,110 @@ Resume = [{
   }]
 }]
 
-Services = [
-  {'Title':"Web App Development",
-  'Details':"Application development, including database design, website setup"},
-  {'Title':"Business Template Creation"},
-  {'Title':"Reliability Engineering Services"}
-]
+Services = [{
+  'Title':
+  "Web App Development",
+  'Details':
+  "Application development, including database design, website setup"
+}, {
+  'Title': "Business Template Creation"
+}, {
+  'Title': "Reliability Engineering Services"
+}]
 
-About = {'Basics':[
-  {'Attribute':'D.O.B',
-   'Value':"18 Sep 1991"},
-    {'Attribute':'Location',
-   'Value':"Perth, Western Australia"},
-    {'Attribute':'Education',
-   'Value':"Honours Degree, Mechanical Engineering, University of Western Australia"},
-  {'Attribute':'Professional Career',
-   'Value':"10yrs, Oil and Gas / Energy Sector"},
-  {'Attribute': "Nationality",
-  'Value': "Australian"},
-  {'Attribute': "Ethnicity",
-  'Value': "Burmese"}
-                  ],
-'Skills':[{'Skills Group':"Engineering",
-          'Skills':[
-            {'Desc':"Ram Analysis",
-            'Lvl':"Experienced"},
-            {'Desc':"Failure Mode Effects Analysis",
-            'Lvl':"Proficient"},
-            {'Desc':"Survival Analysis",
-            'Lvl':"Proficient"},
-            {'Desc':"Risk modelling",
-            'Lvl':"Experienced"},
-            {'Desc':"Lifecycle Costing",
-            'Lvl':"Experienced"}
-          ]},
-         {'Skills Group':"Software",
-         'Skills':[{'Desc':"Database design and creation", 
-                    'Lvl':""},
-                   {'Desc':"Web App Development",
-                    'Lvl':""},
-                   {'Desc':"Website Development",
-                    'Lvl':""},
-                   {'Desc':"Power Apps",
-                    'Lvl':""},
-                   {'Desc':"Tableau & PowerBi",
-                    'Lvl':""},
-                   {'Desc':"SQL",
-                    'Lvl':""}]},
-         {'Skills Group':"Soft Skills",
-         'Skills':[{'Desc':"Project Management - Agile or Waterfall",
-                    'Lvl':"Experienced"}]}],
-        'Languages':[{'Language Group':"Databases",
-                     'Languages':["SQL", "Powerquery"]}],
-         'Interests':['Social sports: Touch Rugby, Netball, Floorball, Parkrun, Backyard Cricket', 'Master of my own kitchen attempting gourmet most days','Art, Musicals, Movie themes on the Piano, Woodwork and most other forms of creative expression']
-        }
+About = {
+  'Basics': [{
+    'Attribute': 'D.O.B',
+    'Value': "18 Sep 1991"
+  }, {
+    'Attribute': 'Location',
+    'Value': "Perth, Western Australia"
+  }, {
+    'Attribute':
+    'Education',
+    'Value':
+    "Honours Degree, Mechanical Engineering, University of Western Australia"
+  }, {
+    'Attribute': 'Professional Career',
+    'Value': "10yrs, Oil and Gas / Energy Sector"
+  }, {
+    'Attribute': "Nationality",
+    'Value': "Australian"
+  }, {
+    'Attribute': "Ethnicity",
+    'Value': "Burmese"
+  }],
+  'Skills': [{
+    'Skills Group':
+    "Engineering",
+    'Skills': [{
+      'Desc': "Ram Analysis",
+      'Lvl': "Experienced"
+    }, {
+      'Desc': "Failure Mode Effects Analysis",
+      'Lvl': "Proficient"
+    }, {
+      'Desc': "Survival Analysis",
+      'Lvl': "Proficient"
+    }, {
+      'Desc': "Risk modelling",
+      'Lvl': "Experienced"
+    }, {
+      'Desc': "Lifecycle Costing",
+      'Lvl': "Experienced"
+    }]
+  }, {
+    'Skills Group':
+    "Software",
+    'Skills': [{
+      'Desc': "Database design and creation",
+      'Lvl': "Proficient"
+    }, {
+      'Desc': "Web App Development",
+      'Lvl': "Competent"
+    }, {
+      'Desc': "Website Development",
+      'Lvl': "Competent"
+    }, {
+      'Desc': "Power Apps",
+      'Lvl': "Experienced"
+    }, {
+      'Desc': "Tableau & PowerBi",
+      'Lvl': "Experienced"
+    }, {
+      'Desc': "SQL",
+      'Lvl': "Proficient"
+    }]
+  }, {
+    'Skills Group':
+    "Soft Skills",
+    'Skills': [{
+      'Desc': "Project Management - Agile or Waterfall",
+      'Lvl': "Experienced"
+    }, {
+      'Desc': "Microsoft Office Suite",
+      'Lvl': "Experienced"
+    }]
+  }],
+  'Languages': [{
+    'Language Group': "Databases",
+    'Languages': ["SQL", "Powerquery", "MSAccess"]
+  }, {
+    'Language Group': "Object-Oriented",
+    'Languages': ["Javascript", "Python", "Visual Basic"]
+  }, {
+    'Language Group': "Statistics",
+    'Languages': ["R"]
+  }, {
+    'Language Group': "Web",
+    'Languages': ["CSS", "HTML", "Flask"]
+  }],
+  'Interests': [
+    'Social sports: Touch Rugby, Netball, Floorball, Parkrun, Backyard Cricket',
+    'Master of my own kitchen attempting gourmet most days',
+    'Art, Musicals, Movie themes on the Piano, Woodwork and most other forms of creative expression'
+  ]
+}
 
 templates = [{
   'Subtitle': "",
